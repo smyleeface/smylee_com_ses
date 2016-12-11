@@ -8,7 +8,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
 * [S3 Bucket](https://aws.amazon.com/s3/pricing/)
 * [Lambda](https://aws.amazon.com/lambda/pricing/)
 * [Simple Queue Service (SQS)](https://aws.amazon.com/sqs/pricing/)
-* [Simple Email Service(SES)](https://aws.amazon.com/ses/pricing/)
+* [Simple Email Service (SES)](https://aws.amazon.com/ses/pricing/)
 * [Identity Access Management (IAM) Role](https://aws.amazon.com/iam/)
 * [CloudWatch Alarm](https://aws.amazon.com/cloudwatch/pricing/)
 * [Key Management Service (KMS)](https://aws.amazon.com/kms/pricing/)
