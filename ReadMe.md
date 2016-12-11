@@ -64,7 +64,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
 1. Depending on the schedule frequency of the second lambda function, it will pickup messages from the queue.
 1. The lambda function will process each message it receives and use SES to send the email to the harded coded email in the lambda function.
 1. The email should appear in the inbox of the harded coded, verified email address used in the lambda function.
-![AWS Receiving email SES](ses_receive_email_workflow.png)
+![AWS Receiving email SES](images/ses_receive_email_workflow.png)
 
 #Note
 * To have multiple recipients for emails, you would need to have some kind of key => value mapping.
