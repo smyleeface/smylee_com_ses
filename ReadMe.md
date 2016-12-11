@@ -2,7 +2,7 @@ AWS SES Email Receiving
 =======================
 Setup email receiving and processing for custom domain email addresses setup in AWS.
 
-#Resources
+##Resources
 * Domain name (i.e. example.com)
 * [Route 53](https://aws.amazon.com/route53/pricing/)
 * [S3 Bucket](https://aws.amazon.com/s3/pricing/)
@@ -13,7 +13,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
 * [CloudWatch Alarm](https://aws.amazon.com/cloudwatch/pricing/)
 * [Key Management Service (KMS)](https://aws.amazon.com/kms/pricing/)
 
-#Steps
+##Steps
 1. `IAM`: Create an IAM for the future lambda function `parse_email`. Give this role permissions:
     * `AmazonSQSFullAccess`
     * `AmazonS3FullAccess`
@@ -57,7 +57,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
 1. Send an email to the `Recipient` address added above.
 1. (Optional) Setup a CloudWatch alarm to monitor any mass emails being sent to the queue.
 
-#Workflow
+##Workflow
 1. An email is sent to a domain registered with AWS.
 1. SES takes the messages and writes it to S3.
 1. That write event triggers a lambda function which pulls only information we need about that event and send is to an SQS queue. Controlling the information sent to SQS guarantees the message is less than 256KB.
@@ -66,7 +66,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
 1. The email should appear in the inbox of the harded coded, verified email address used in the lambda function.
 ![AWS Receiving email SES](images/ses_receive_email_workflow.png)
 
-#Note
+##Note
 * To have multiple recipients for emails, you would need to have some kind of key => value mapping.
 * If using `1 minute` schedule, that's 43,200 lambda calls in 30 days. With 1,000,000 lambda calls in a free tier, this frequency is free (if other lambda services are not running).
 * This setup is practically free for a simple personal use. The biggest cost up front is KMS key and gidomain at about $1-2.
