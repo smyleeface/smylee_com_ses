@@ -19,6 +19,7 @@ Setup email receiving and processing for custom domain email addresses setup in 
     * `AmazonS3FullAccess`
     * `CloudWatchFullAccess`
     * `AmazonSESFullAccess`
+1. `KMS`: Create a new KMS key, or get the name of an existing KMS key.
 1. `SES`: Register domain name. It will give you a `TXT` value. Use `DKIM` and it will generate three `CNAME` values. AWS can add these automatically; or copy the four values for the next step.
 1. `Route53`: Create a Hosted Zone for the domain name entered in SES if one does not already exist. Add the four values from SES to Route53 if AWS did not add it automatically.
 1. `SES`: Add emails under `Identity Management`.
