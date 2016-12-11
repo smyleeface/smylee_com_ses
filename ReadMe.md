@@ -66,7 +66,7 @@
 * To have multiple recipients for emails, you would need to have some kind of key => value mapping.
 * If using `1 minute` schedule, that's 43,200 lambda calls in 30 days. With 1,000,000 lambda calls in a free tier, this frequency is free (if other lambda services are not running).
 * This setup is practically free for a simple personal use. The biggest cost up front is KMS key and gidomain at about $1-2.
-* An, alternate setup, store emails in database and create a front end to view instead of forwarding to another email address.
+* For an alternate setup, store emails in database and create a front end to view instead of forwarding to another email address.
 * To use SES built-in encryption, you must decrypt using an Encryption Client available in AWS SDK for Java and Ruby.
 http://docs.aws.amazon.com/kms/latest/developerguide/services-ses.html#services-ses-decrypt
 Because of this restriction, in this code, the lambda function encrypts the file at rest and removes the original during the s3 event message to sqs phase.
