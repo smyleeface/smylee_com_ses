@@ -1,3 +1,7 @@
+AWS SES Email Receiving
+=======================
+Setup email receiving and processing for custom domain email addresses setup in AWS.
+
 #Resources
 * Domain name (i.e. example.com)
 * [Route 53](https://aws.amazon.com/route53/pricing/)
